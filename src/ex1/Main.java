@@ -1,34 +1,36 @@
+package ex1;
+
 public class Main {
     public static void main(String[] args) {
 
-        // Exercise 1 - Code Block 1. Creating three objects, the Instrument class is loaded once.
-        System.out.println("\nExercise 1:");
-        PercussionInstrument percussion1 = new PercussionInstrument("Tambourine", 13.90);
-        StringInstrument string1 = new StringInstrument("Violin", 139.90);
-        WindInstrument wind1 = new WindInstrument("Flute", 39);
+        // Calling a static method from Instrument loads the class into memory
+        System.out.println("\nSTEP 1: Calling static method on Instrument");
+        Instrument.sayHello();
 
+        // Creating two PercussionInstrument instances:
+        // - Instrument class was already loaded (from sayHello())
+        // - PercussionInstrument class loads once, then reused
+        System.out.println("\nSTEP 2: Creating two PercussionInstrument instances");
+        PercussionInstrument percussion1 = new PercussionInstrument("Tambourine", 13.90);
+        System.out.println(percussion1);
+        PercussionInstrument percussion2 = new PercussionInstrument("Drums", 123.00);
+        System.out.println(percussion2);
+
+        // StringInstrument class is loaded
+        System.out.println("\nSTEP 3: Creating StringInstrument instance");
+        StringInstrument string1 = new StringInstrument("Violin", 139.90);
+        System.out.println(string1);
+
+        // WindInstrument class is loaded
+        System.out.println("\nSTEP 4: Creating WindInstrument instance");
+        WindInstrument wind1 = new WindInstrument("Flute", 39);
+        System.out.println(wind1);
+
+        System.out.println("\nSTEP 5: Playing instruments");
         percussion1.play();
+        percussion2.play();
         string1.play();
         wind1.play();
-
-        // Exercise 1 - Code Block 2. Accessing a static member also loads the class.
-        System.out.println("Accessing Instrument.objectType:" + Instrument.objectType);
-
-        // Exercise 2
-        System.out.println("\nExercise 2:");
-        System.out.println("Brand: " + Car.getBrand());
-        Car.setModel("León");
-        System.out.println("Model: " + Car.getModel());
-
-        Car.brake();
-
-        Car car1 = new Car("Arona", 95);
-
-        System.out.println("Power: " + car1.getPower());
-        System.out.println("Model: " + Car.getModel());
-
-        car1.accelerate();
-
 
     }
 }

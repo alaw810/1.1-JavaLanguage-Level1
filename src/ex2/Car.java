@@ -1,3 +1,5 @@
+package ex2;
+
 public class Car {
     private static final String brand = "Seat";
     private static String model;
