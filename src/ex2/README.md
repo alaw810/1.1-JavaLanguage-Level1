@@ -1,13 +1,5 @@
 ## 📄 Description – Exercise Statements
 
-### Exercise 1 – Musical Instruments and Class Loading
-
-- Create an abstract class `Instrument` with attributes: `name` and `price`, and an abstract method `play()`.
-- Subclasses (`WindInstrument`, `StringInstrument`, and `PercussionInstrument`) must implement the `play()` method with different console outputs.
-- Use a static block to demonstrate that a class is only loaded once in Java.
-- Show that class loading can be triggered by creating the first instance or accessing a static member.
-- Introduce static and initialization blocks to visualize class loading behavior.
-
 ### Exercise 2 – Car Class and Static vs Final Members
 
 - Create a `Car` class with the following attributes:
@@ -48,7 +40,7 @@ Follow these steps to set up the project locally:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Alaw810/1.1-JavaLanguage-Nivell1.git
+   git clone https://github.com/alaw810/1.1-JavaLanguage-Level1.git
 
 2. Open the project with IntelliJ IDEA:
 

@@ -11,8 +11,8 @@ public class Main {
 
         Car car1 = new Car("Arona", 95);
 
-        System.out.println("Power: " + car1.getPower());
         System.out.println("Model: " + Car.getModel());
+        System.out.println("Power: " + car1.getPower());
 
         car1.accelerate();
 
